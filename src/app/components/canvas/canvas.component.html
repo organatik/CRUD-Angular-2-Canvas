@@ -1,0 +1,10 @@
+<div class="col-md-9" style="text-align: center;">
+  <canvas (click)="drawOnCanvas()" #myCanvas width="300px" height="300px" style="border: 1px solid">
+
+  </canvas>
+  <div class="col-md-12">
+    <button (click)="clearCanvas()" class="btn btn-default">Clear</button>
+    <button (click)="moveCanvas()" class="btn btn-default">Move</button>
+  </div>
+  <p>{{ x }}</p>
+</div>

@@ -1,0 +1,23 @@
+.wrapper{
+  padding-top: 30px;
+  border-right: 1px solid gainsboro;
+  height: 100vh;
+}
+.controls{
+  text-align: center;
+}
+button{
+  margin: 0 20px;
+  width: 75px;
+}
+.list{
+  margin-top: 50px;
+}
+
+table tr:hover:not(:first-child){
+  cursor: pointer;
+  background-color: cyan;
+}
+table tr.active td {
+  background-color: cyan ;
+}

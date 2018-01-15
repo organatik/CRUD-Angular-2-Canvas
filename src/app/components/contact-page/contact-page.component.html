@@ -1,0 +1,103 @@
+<div class="col-md-6 wrapper">
+  <div class="row">
+    <div class="col-md-12 controls">
+      <button class="btn btn-default" (click)="showCreate()">Create</button>
+      <button class="btn btn-default" (click)="showEdit()" >Edit</button>
+      <button class="btn btn-default" (click)="deleteUser(selectedRow)">Delete</button>
+    </div>
+    <div *ngIf="showCreateFlag" class="col-md-12 create">
+      <form [formGroup]="userForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="surname">Surname</label>
+          <input type="text" class="form-control" id="surname" formControlName="surname">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" formControlName="age">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" formControlName="description">
+        </div>
+        <div class="form-group">
+          <label for="group">Group</label>
+          <input type="text" class="form-control" id="group" formControlName="group">
+        </div>
+        <div class="form-group">
+          <label for="note">Note</label>
+          <input type="text" class="form-control" id="note"  formControlName="note">
+        </div>
+        <button type="submit" (click)="addUser()" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div *ngIf="showEditFlag" class="col-md-12 editBlock">
+
+      <form [formGroup]="userEditForm" novalidate>
+        <div class="form-group">
+          <label for="editName">Name</label>
+          <input type="text" class="form-control" id="editName" [placeholder]="users[selectedRow].name" formControlName="editName">
+        </div>
+        <div class="form-group">
+          <label for="editSurname">Surname</label>
+          <input type="text" class="form-control" id="editSurname" [placeholder]="users[selectedRow].surname"  formControlName="editSurname">
+        </div>
+        <div class="form-group">
+          <label for="editAge">Age</label>
+          <input type="number" class="form-control" id="editAge" [placeholder]="users[selectedRow].age" formControlName="editAge">
+        </div>
+        <div class="form-group">
+          <label for="editDescription">Description</label>
+          <input type="text" class="form-control" id="editDescription" required [placeholder]="users[selectedRow].description" formControlName="editDescription">
+        </div>
+        <div class="form-group">
+          <label for="editGroup">Group</label>
+          <input type="text" class="form-control" id="editGroup" [placeholder]="users[selectedRow].group" formControlName="editGroup">
+        </div>
+        <div class="form-group">
+          <label for="editNote">Note</label>
+          <input type="text" class="form-control" id="editNote" [placeholder]="users[selectedRow].note"  formControlName="editNote">
+        </div>
+        <button type="submit" (click)=" editUser()" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-12 list">
+      <table class="table table-bordered table-striped" width="100%">
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Age</th>
+          <th>Group</th>
+          <th>Description</th>
+          <th>Note</th>
+        </tr>
+        <tr *ngFor="let user of users; let i = index"
+            (click)="setClickedRow(i)"
+            [class.active]="i == selectedRow">
+          <td>{{ user.name  }}</td>
+          <td>{{ user.surname  }}</td>
+          <td>{{ user.age  }}</td>
+          <td>{{ user.group  }}</td>
+          <td>{{ user.description  }}</td>
+          <td>{{ user.note}}</td>
+        </tr>
+      </table>
+      <!--<div class="col-md-12">-->
+        <!--<p>-->
+          <!--Selected Row : <strong>{{ selectedRow }}</strong>-->
+        <!--</p>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+<div class="col-md-3" style="margin-left: 50px;margin-top: 40px;font-size: 20px;">
+  <p><strong>Name:</strong> {{ users[selectedRow].name }}</p>
+  <p><strong>Surname:</strong> {{ users[selectedRow].surname }}</p>
+  <p><strong>Age:</strong> {{ users[selectedRow].age  }}</p>
+  <p><strong>Group:</strong> {{ users[selectedRow].group  }}</p>
+  <p><strong>Description:</strong> {{ users[selectedRow].description  }}</p>
+  <p><strong>Note:</strong> {{ users[selectedRow].note  }}</p>
+</div>

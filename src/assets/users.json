@@ -5,6 +5,31 @@
     "age": 25,
     "group": "Admin",
     "description": "Like football",
-    "note": null
+    "note": ""
+  },
+
+  {
+    "name" : "Max",
+    "surname": "Jori",
+    "age": 25,
+    "group": "Admin",
+    "description": "Like football",
+    "note": ""
+  },
+  {
+    "name" : "Sergey",
+    "surname": "Lenin",
+    "age": 25,
+    "group": "Admin",
+    "description": "Like football",
+    "note": ""
+  },
+  {
+    "name" : "Alex",
+    "surname": "Toms",
+    "age": 25,
+    "group": "Admin",
+    "description": "Like football",
+    "note": ""
   }
 ]

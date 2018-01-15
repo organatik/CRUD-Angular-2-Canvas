@@ -1,0 +1,12 @@
+.controls{
+  margin: 20px 0;
+}
+.controls button{
+  margin: 0 20px;
+}
+.panel-heading{
+  cursor: pointer;
+}
+.active .panel-heading {
+  background-color: cyan!important;
+}
