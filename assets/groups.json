@@ -1,0 +1,33 @@
+[{
+  "name": "Admin",
+  "members": [{
+    "name": "Anton",
+    "surname": "Ivanov"
+  },
+    {
+      "name": "Max",
+      "surname": "Petrov"
+    },
+    {
+      "name": "Sergey",
+      "surname": "Krasnov"
+    }
+  ]
+},
+  {
+    "name": "User",
+    "members": [{
+      "name": "David",
+      "surname": "Ivanovi"
+    },
+      {
+        "name": "Egor",
+        "surname": "Petrovi"
+      },
+      {
+        "name": "Kris",
+        "surname": "Krasnovi"
+      }
+    ]
+  }
+]
