@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Anton",
+    "surname": "Pupkin",
+    "age": 25,
+    "group": "Admin",
+    "description": "Like football",
+    "note": null
+  }
+]
